@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 40px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    height: 70px;
+    width: 600px;
+    border: 10px solid white;
+}
+
+
+.color-button{
+    position: relative;
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    width: 250px;
+    height: 50px;
+    left: 180px;
+    top: 40px;
+}
