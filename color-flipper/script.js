@@ -1,20 +1,56 @@
-const colorButton = document.querySelector('.color-button');
-      const bodyEl = document.querySelector('body');
-      const containerEl = document.querySelector(".container")
-      const colorDiv = document.createElement('div');
-      colorDiv.className = "color-div"
+const colorButton = document.querySelector(".color-button");
+const bodyEl = document.querySelector("body");
+const containerEl = document.querySelector(".container");
+let standardColors = document.querySelector(".standard-colors");
+let allShades = document.querySelector(".all-shades");
+const buttonClose = document.querySelector(".button-close");
+const introductionWindow = document.querySelector(".intrduction");
+const colorDiv = document.createElement("div");
+colorDiv.className = "color-div";
 
-      containerEl.appendChild(colorDiv);
+containerEl.appendChild(colorDiv);
 
-      function randomNum() {
-        return Math.floor(Math.random() * 255);
-      }
+const colors = [
+  "yellow",
+  "orange",
+  "red",
+  "violet",
+  "blueviolet",
+  "blue",
+  "green",
+  "yellowgreen",
+];
 
-      colorButton.addEventListener('click', () => {
+function randomNum() {
+  return Math.floor(Math.random() * 255);
+}
 
-        const color = `rgb(${randomNum()} ${randomNum()} ${randomNum()})`;
+standardColors.addEventListener("click", () => {
+  standardColors = true;
+  allShades = false;
+});
 
-        bodyEl.style.backgroundColor = color;
+allShades.addEventListener("click", () => {
+  allShades = true;
 
-        colorDiv.textContent = color;
-      });
+  standardColors = false;
+});
+
+colorButton.addEventListener("click", () => {
+  const randomColor = Math.floor(Math.random() * colors.length);
+  if (standardColors == true) {
+    bodyEl.style.backgroundColor = colors[randomColor];
+
+    colorDiv.textContent = colors[randomColor];
+  } else if (allShades == true) {
+    const color = `rgb(${randomNum()} ${randomNum()} ${randomNum()})`;
+
+    bodyEl.style.backgroundColor = color;
+
+    colorDiv.textContent = color;
+  }
+});
+
+buttonClose.addEventListener("click", ()=> {
+  introductionWindow.style.display = "none";
+})
