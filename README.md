@@ -1,6 +1,6 @@
-# Java script Projects Collections 
+# JavaScript Projects Collections 
 
-This repository contains a collection of 2 Java script projects. Each project demonstrates different Java script technique and style.
+This repository contains a collection of 2 JavaScript projects. Each project demonstrates different JavaScript technique and style.
 
 --Projects
 
